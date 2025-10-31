@@ -16,6 +16,7 @@ fn main() {
         println!("cargo:rustc-link-lib=static=avutil");
         println!("cargo:rustc-link-lib=static=dav1d");
         println!("cargo:rustc-link-lib=static=z");
+        println!("cargo:rustc-link-lib=static=stdc++");
 
         #[cfg(feature = "vship")]
         {
@@ -26,7 +27,6 @@ fn main() {
             println!("cargo:rustc-link-lib=static=vship");
 
             println!("cargo:rustc-link-lib=static=cudart_static");
-            println!("cargo:rustc-link-lib=static=stdc++");
             println!("cargo:rustc-link-search=native=/opt/cuda/lib64");
 
             println!("cargo:rustc-link-lib=dylib=cuda");
