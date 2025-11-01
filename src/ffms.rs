@@ -3,7 +3,6 @@ use std::path::Path;
 use std::sync::Arc;
 
 #[repr(C)]
-#[allow(non_camel_case_types)]
 pub struct FFMS_ErrorInfo {
     error_type: i32,
     sub_type: i32,
@@ -12,7 +11,6 @@ pub struct FFMS_ErrorInfo {
 }
 
 #[repr(C)]
-#[allow(non_camel_case_types)]
 struct FFMS_VideoProperties {
     fps_denominator: i32,
     fps_numerator: i32,
@@ -49,7 +47,6 @@ struct FFMS_VideoProperties {
 }
 
 #[repr(C)]
-#[allow(non_camel_case_types)]
 pub struct FFMS_Frame {
     pub data: [*const u8; 4],
     pub linesize: [i32; 4],
